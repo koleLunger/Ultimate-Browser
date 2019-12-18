@@ -22,7 +22,7 @@ app.listen(3000, function() {
 
 app.get('/', function(req, res, err) {
   let options = {
-    url: 'https://api.github.com/repos/koleLunger/JSFBrowser',
+    url: 'https://api.github.com/repos/Yadi202/Ultimate-Browser',
     headers: {
       'User-Agent': 'request'
     }
