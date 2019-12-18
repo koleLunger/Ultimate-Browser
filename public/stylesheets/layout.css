@@ -1,0 +1,35 @@
+body{
+  text-align: center;
+  background-color: #c1e6cb;
+}
+
+.spartBox {
+  text-align: center;
+  border: black;
+  border-width: 1px;
+  border-style:  solid;
+  width: 200px;
+}
+.spartRow {
+  text-align: center;
+  display: flex;
+  border: black;
+  border-width: 1px;
+  border-style:  solid;
+  margin: 2px;
+  justify-content: space-between;
+}
+.spartCell {
+  text-align: center;
+  margin: 2px;
+}
+body {
+  background-color: #ff0000
+
+}
+title {
+  color: #ff0000
+}
+form{
+  color: #1100fa
+}

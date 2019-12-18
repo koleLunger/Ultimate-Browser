@@ -1,0 +1,20 @@
+html
+  head
+    title Fighter Stats
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+  body
+    h1= fighter_name
+    a(href='../player/' + fighter_player_UID)= fighter_player_UID
+    br
+    br
+    .spartBox
+      .spartRow
+        .spartCell ATK:
+        .spartCell= stat_atk
+      .spartRow
+        .spartCell DEF:
+        .spartCell= stat_def
+      .spartRow
+        .spartCell TEK:
+        .spartCell= stat_tek
+    a(href='../') Home

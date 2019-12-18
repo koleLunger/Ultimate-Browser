@@ -1,0 +1,11 @@
+html
+  head
+    title Player Stats
+    link(rel='stylesheet', href='/stylesheets/listplayers.css')
+  body
+    .spartBox
+      each playeritem in list
+        .spartRow
+          .spartCell
+            a(href='../../player/' + playeritem.player_UID)= playeritem.player_name
+    a(href='/') Home

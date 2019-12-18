@@ -1,0 +1,20 @@
+html
+  head
+    title Fighter Stats
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+  body
+    form(action="/search/", method="post")
+      | Fighter Search:
+      input(type="text", name="search")
+      br
+      input(type="submit", value="Search")
+    a(href='/list/players/') List All Players
+    br
+    a(href='/list/fighters/') List All Fighters
+    br
+    a(href='/add') New Fighter
+    br
+    //- a=gitURL.html_url 
+    a(href=gitURL.html_url) link to Github
+    
+    //- a(href=gitURL)Github

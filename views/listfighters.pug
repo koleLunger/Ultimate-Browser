@@ -1,0 +1,11 @@
+html
+    head
+        title Student Stats
+        link(rel='stylesheet', href='/stylesheets/layout.css')
+    body
+        .spartBox
+            each fighter in list
+                .spartRow
+                    .spartCell
+                        a(href='../../fighter/' + fighter.fighter_UID)= fighter.fighter_name
+        a(href='/') Home
