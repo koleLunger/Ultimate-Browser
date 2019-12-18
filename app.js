@@ -35,7 +35,7 @@ app.get('/', function(req, res, err) {
 });
 
 app.post('/search', function(req, res, err) {
-  request('https://'+serveraddress+'/api/v0/fighter/search/' + req.body.search, function(request_err, request_res, request_body) {
+  request('http://'+serveraddress+'/api/v0/fighter/search/' + req.body.search, function(request_err, request_res, request_body) {
     if (request_err || request_res.statusCode != 200) {
       res.send("Oops! There was a problem with the request module: <br>" + request_err);
     } else if (request_body == "undefined") {
@@ -49,7 +49,7 @@ app.post('/search', function(req, res, err) {
 });
 
 app.get('/list/fighters', function(req, res, err) {
-  request('https://'+serveraddress+'/api/v0/fighter/list/', function(request_err, request_res, request_body) {
+  request('http://'+serveraddress+'/api/v0/fighter/list/', function(request_err, request_res, request_body) {
     if (request_err || request_res.statusCode != 200) {
       res.send("Oops! There was a problem with the request module: <br>" + request_err);
     } else if (request_body == "undefined") {
@@ -63,7 +63,7 @@ app.get('/list/fighters', function(req, res, err) {
 });
 
 app.get('/list/players', function(req, res, err) {
-  request('https://'+serveraddress+'/api/v0/player/list', function(request_err, request_res, request_body) {
+  request('http://'+serveraddress+'/api/v0/player/list', function(request_err, request_res, request_body) {
     if (request_err || request_res.statusCode != 200) {
       res.send("Oops! There was a problem with the request module: <br>" + request_err);
     } else if (request_body == "undefined") {
@@ -77,7 +77,7 @@ app.get('/list/players', function(req, res, err) {
 });
 
 app.get('/player/:player', function(req, res, err) {
-  request('https://'+serveraddress+'/api/v0/player/show/' + req.params.player, function(request_err, request_res, request_body) {
+  request('http://'+serveraddress+'/api/v0/player/show/' + req.params.player, function(request_err, request_res, request_body) {
     if (request_err || request_res.statusCode != 200) {
       res.send("Oops! There was a problem with the request module: <br>" + request_err);
     } else if (request_body == "undefined") {
@@ -91,7 +91,7 @@ app.get('/player/:player', function(req, res, err) {
 });
 
 app.get('/fighter/:fighterUID', function(req, res, err) {
-  request('https://'+serveraddress+'/api/v0/fighter/show/' + req.params.fighterUID, function(request_err, request_res, request_body) {
+  request('http://'+serveraddress+'/api/v0/fighter/show/' + req.params.fighterUID, function(request_err, request_res, request_body) {
     if (request_err || request_res.statusCode != 200) {
       res.send("Oops! There was a problem with the request module: <br>" + request_err);
     } else if (request_body == "undefined") {
@@ -107,7 +107,7 @@ app.get('/add/', function(req, res, err) {
 });
 
 app.post('/add/', function(req, res, err) {
-  request.post("'https://'+serveraddress+'/api/v0/fighter/add/", {
+  request.post('http://'+serveraddress+'/api/v0/fighter/add/', {
     form: {
       fightername: req.body.fightername,
       player_name: req.body.player_name
