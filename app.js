@@ -30,6 +30,7 @@ app.get('/', function(req, res, err) {
 
   request(options, function(request_err, request_res, request_body) {
     let jsonstuff = JSON.parse(request_body)
+    console.log(jsonstuff);
     res.status(200).render('index', {
       gitURL: jsonstuff
     })
@@ -109,7 +110,7 @@ app.get('/add/', function(req, res, err) {
 });
 
 app.post('/add/', function(req, res, err) {
-request.post('https://' + serveraddress + '/api/v0/fighter/add/') {
+request.post('https://' + serveraddress + '/api/v0/fighter/add/') ,{
   form: {
     fightername: req.body.fightername,
     player_name: req.body.player_name
@@ -123,5 +124,5 @@ if (request_res.statusCode == 201) {
 } else {
   res.send("Error!")
 }
-})
+
 });
