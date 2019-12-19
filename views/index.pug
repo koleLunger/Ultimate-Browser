@@ -3,6 +3,7 @@ html
     title Fighter Stats
     link(rel='stylesheet', href='/stylesheets/layout.css')
   body
+    <h1>JSF Browser</h1>
     form(action="/search/", method="post")
       | Fighter Search:
       input(type="text", name="search")
@@ -15,6 +16,6 @@ html
     a(href='/add') New Fighter
     br
     //- a=gitURL.html_url 
-    a(href=gitURL.html_url) link to Github
+    a(href=gitURL.html_url) Link to Github
     
     //- a(href=gitURL)Github
