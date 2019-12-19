@@ -1,6 +1,6 @@
-body{
-  text-align: center;
-  background-color: #c1e6cb;
+
+body {
+  background-image: linear-gradient(yellow, red);
 }
 
 .spartBox {
@@ -24,11 +24,12 @@ body{
   margin: 2px;
 }
 body {
-  background-color: #ff0000
-
+    text-align: center;
+    font-size: 30;
+  background-color: #675b85
 }
 title {
-  color: #ff0000
+  color: #00004d
 }
 form{
   color: #1100fa
