@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(express.static("public"));
 
-const serveraddress = '192.168.24.161:3001'
+const serveraddress = '192.168.24.231:3001'
 app.listen(3000, function() {
   console.log('Listening on port ' + 3000 + '.');
 });
