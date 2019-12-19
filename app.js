@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(express.static("public"));
 
-const serveraddress = '192.168.56.1'
+const serveraddress = '192.168.106.1'
 app.listen(3000, function() {
   console.log('Listening on port ' + 3000 + '.');
 });
@@ -107,7 +107,7 @@ app.get('/add/', function(req, res, err) {
 });
 
 app.post('/add/', function(req, res, err) {
-  request.post("'https://'+serveraddress+'/api/v0/fighter/add/", {
+  request.post('https://'+serveraddress+'/api/v0/fighter/add/') {
     form: {
       fightername: req.body.fightername,
       player_name: req.body.player_name
