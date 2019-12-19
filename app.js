@@ -107,7 +107,7 @@ app.get('/add/', function(req, res, err) {
 });
 
 app.post('/add/', function(req, res, err) {
-  request.post('https://'+serveraddress+'/api/v0/fighter/add/' {
+  request.post('https://'+serveraddress+'/api/v0/fighter/add/') {
     form: {
       fightername: req.body.fightername,
       player_name: req.body.player_name
